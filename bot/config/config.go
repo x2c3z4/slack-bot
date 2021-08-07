@@ -31,7 +31,8 @@ type Config struct {
 	PullRequest  PullRequest `mapstructure:"pullrequest"`
 	Timezone     string      `mapstructure:"timezone"`
 
-	Plugins     []string      `mapstructure:"plugins"`
+	// list of slack-bot plugins to load
+	Plugins []string `mapstructure:"plugins"`
 }
 
 // Github config, currently just an access token
