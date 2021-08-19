@@ -72,7 +72,7 @@ func (b *Bot) Init() (err error) {
 		go b.slackClient.RTM.ManageConnection()
 	}
 
-	pluginCommands := LoadPlugins(&b.config)
+	pluginCommands := LoadPlugins(b)
 	b.commands.Merge(pluginCommands)
 
 	log.Infof("Loaded %d allowed users and %d channels", len(b.allowedUsers), len(client.Channels))
