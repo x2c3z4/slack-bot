@@ -34,6 +34,7 @@ func GetCommands(slackClient client.SlackClient, cfg config.Config) *bot.Command
 		NewAddButtonCommand(base),
 		NewReactionCommand(base),
 		NewSendMessageCommand(base),
+		NewIPCommand(base),
 		NewDelayCommand(base),
 		NewRandomCommand(base),
 		NewHelpCommand(base, commands),
