@@ -19,7 +19,7 @@ type ShellCommand struct {
 }
 
 func (c *ShellCommand) GetMatcher() matcher.Matcher {
-	return matcher.NewRegexpMatcher(`(?P<cmd>file|fq) +(?P<op>[\w|\-|\d|\.]+) +(?P<arg1>[\w|\-|\d|\.|\*]+)`, c.execCmd)
+	return matcher.NewRegexpMatcher(`(?P<cmd>file|fq) +(?P<op>[\w|\-|\d|\.]+) +(?P<arg1>[\w|\-|\d|\.|:|\/]+)`, c.execCmd)
 }
 
 func cmd_run_script(args []string) string {
